@@ -27,10 +27,23 @@ body, div, button, h1 {
 
 
 
+
 #title {
     font-size: 18px;
     margin: 2rem 0;
     height: 46px;
+}
+
+#border {
+    border-style: solid;
+    background: border-box;
+    border-width: 1px;
+    position: relative;
+    border-color: #f8a9ce8f;
+    top: 39px;
+    left: 10px;
+    background: content-box;
+    padding: -63px;
 }
 
 #wrapper {
@@ -54,6 +67,8 @@ body, div, button, h1 {
     padding: 30px;
     border: 0px solid rgb(0 0 0 / 3%);
     text-align:center;
+    position: relative;
+    top: -42px;
 }
 
 #lotto-title{
@@ -190,11 +205,12 @@ body, div, button, h1 {
 }
 #lotto-2-button {
     position: relative;
+    bottom: -51px;
     display: block;
     padding: 1rem 2.5rem 1.6rem;
     background: #fff;
-    color: #666;
-    border: 2px solid #666;
+    color: #0c0b0b;
+    border: 2px solid #282525;
     border-radius: 6px;
     overflow: hidden;
     transition: .5s;
@@ -204,8 +220,8 @@ body, div, button, h1 {
 #lotto-2-button:hover {
     padding: 1rem 2.5rem 1rem;
     margin-top: .6rem;
-    background: #999;
-    color: #fff
+    background: rgb(255, 239, 239);
+    color: rgba(12, 7, 34, 0.872)
 }
 
 #lotto-2-button::after {
@@ -216,8 +232,9 @@ body, div, button, h1 {
     display: block;
     height: .6rem;
     width: 100%;
-    background-image: repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
-    border-top: 1px solid #666;
+    position: fixed;
+    /* background-image: repeating-linear-gradient(45deg, #666, #666 1px, transparent 2px, transparent 5px);
+    border-top: 1px solid #666; */
     transition: .5s
 }
 
