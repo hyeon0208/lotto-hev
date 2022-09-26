@@ -103,10 +103,19 @@ body, div, button, h1 {
     height: 34px;
 }
 
-.rannum{
+#rannum{
     font-size: 12px;
     letter-spacing: 2px;
     text-indent: -8px;
+}
+
+#rannum1{
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-indent: 0px;
+    position: relative;
+    left: -7px;
+    bottom: -2px;
 }
 
 .ranco{
@@ -134,6 +143,20 @@ body, div, button, h1 {
     position: relative;
     left: -3px;
 }
+
+.블로그 {
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-indent: 0px;
+    word-spacing: 66px;
+    height: 5px;
+    position: relative;
+    left: -7px;
+    top: -500px;
+    font-family: inherit;
+}
+
+
 
 .구분선1 {
 
