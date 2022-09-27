@@ -111,7 +111,8 @@ body, div, button, h1 {
 
 #rannum1{
     font-size: 14px;
-    letter-spacing: 1px;
+    /* letter-spacing: 1px; */
+    word-spacing: 5px;
     text-indent: 0px;
     position: relative;
     left: -7px;
