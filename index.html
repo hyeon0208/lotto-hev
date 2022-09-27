@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="lotto.css">
     <meta name="viewport" content="width=device-width, height=580, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <body>
-
+    <div id="capture">
     <div id="wrapper">
 
         <div id="border">
@@ -173,11 +173,12 @@
         </div>
    -->
         </div>
+        
     </div>
         <button id="lotto-2-button">추첨하기</button>
     </div>
 
-    <a href="경로" /download><button id="이미지">로또 저장하기</button></a>
+    <!-- <a href="경로" /download><button id="이미지">로또 저장하기</button></a> -->
 
                 <!-- Go to www.addthis.com/dashboard to customize your tools -->
                 <div class="addthis_inline_share_toolbox"></div>
@@ -257,8 +258,90 @@ btn.addEventListener("click", function () {
 
     </script>
 
+
+
     <script src="lotto.js"></script>
 
+    <!-- <button type="button" onclick="downImg()">div영역 이미지로 저장</button> -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <!-- <script type="text/javascript">
+      //이미지(png)로 다운로드
+      function downImg(){
+          html2canvas($("#wrapper")[0]).then(function(canvas){
+              var myImage = canvas.toDataURL();
+              downloadURI(myImage, "123.png") 
+          });
+      }
+    
+      function downloadURI(uri, name){
+          var link = document.createElement("a")
+          link.download = name;
+          link.href = uri;
+          document.body.appendChild(link);
+          link.click();
+      }
+    </script> -->
+
+
+
+
+
+    <button type="button" class="btnScreenShot" id="btnScreenShot" style="
+    position: relative;
+    left: 45%;
+">이미지 저장</button>
+<div id="img-out"></div>
+
+
+
+<script>
+
+$("#btnScreenShot").on("click", function() {
+ html2canvas(document.querySelector("#wrapper")).then(function(canvas) {
+ if (canvas.msToBlob) { //for IE 10, 11
+  var blob = canvas.msToBlob();
+  window.navigator.msSaveBlob(blob, "capture.png");
+ } else {
+  saveAs(canvas.toDataURL(), "capture.png");
+ }
+ });
+
+ function saveAs(uri, filename) {
+
+  var link = document.createElement('a');
+
+  if (typeof link.download === 'string') {
+
+   link.href = uri;
+
+   link.download = filename;
+
+   //Firefox requires the link to be in the body
+
+   document.body.appendChild(link);
+
+   //simulate click
+
+   link.click();
+
+   //remove the link when done
+
+   document.body.removeChild(link);
+
+  } else {
+   window.open(uri);
+  }
+ }
+});
+
+
+
+</script>
+
+
+</div>
 
     
 </body>
