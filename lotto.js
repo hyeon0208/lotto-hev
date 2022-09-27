@@ -1,4 +1,12 @@
+import html2canvas from 'html2canvas';
 
+html2canvas(document.body).then(canvas => {
+    const link = document.createElement('a')
+    link.download = 'filename'
+    link.href = canvas.toDataURL()
+    document.body.appendChild(link)
+    link.click()
+});
 
 // id="rannum" 랜덤 숫자 뽑기 함수
 function num() {
