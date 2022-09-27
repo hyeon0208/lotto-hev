@@ -40,6 +40,7 @@ body, div, button, h1 {
     border-width: 1px;
     position: relative;
     border-color: #f8a9ce8f;
+    border-right-color: #fffffe00;
     top: 39px;
     left: 10px;
     background: content-box;
@@ -157,6 +158,23 @@ body, div, button, h1 {
     font-family: inherit;
 }
 
+.btnScreenShot {
+    position: relative;
+    top: -54px;
+    left: 0px;
+    width: 100px;
+    height: 33px;
+    background-color: #83dafb8f;
+    border: 2px black;
+    border-style: solid;
+    border-radius: 5px;
+    color: #1a1717;
+    font-size: 14px;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
 
 
 .구분선1 {
